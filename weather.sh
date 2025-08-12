@@ -25,7 +25,7 @@ source default_profile
 mkdir -p data
 wget -N \
      -P 'data/' \
-     'ftp://ftp.ncdc.noaa.gov/pub/data/noaa/isd-history.csv'
+     'http://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv'
 
 # copy data into weather-station data
 tr [:upper:] [:lower:] < data/isd-history.csv |
