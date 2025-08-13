@@ -6,7 +6,7 @@ WBAN=$2
 YEAR=$3
 
 wget -O- \
-     "ftp://ftp.ncdc.noaa.gov/pub/data/noaa/isd-lite/${YEAR}/${USAF}-${WBAN}-${YEAR}.gz" |
+     "http://www.ncei.noaa.gov/pub/data/noaa/isd-lite/${YEAR}/${USAF}-${WBAN}-${YEAR}.gz" |
 gunzip -c |
 in2csv -H -s weather_schema.csv |
 sed 's/,-,/,,/g;s/-9999/     /g' |
